@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout HTML5</title>
+    <style>        
+        header, section, footer, aside, nav, article, figure, figcaption {
+            display: block;
+        }
+
+        body {
+            background: #320e0e url('images/dark-wood.jpg') center center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #666666;
+            line-height: 1.4em;
+            margin: 0;
+        }
+
+        div#alert {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            div#alert {
+                display: block;
+                color: white;
+                background: #ff0000;
+                text-shadow: 1px 1px 1px black;
+                height: 100px;
+                padding: 10px;
+            }
+
+            div#alert h2 {
+                font-variant: small-caps;
+            }
+        }
+        div#page {
+            background: white;
+            margin: 20px auto 20px auto;
+            max-width: 940px;
+            border: 2px solid black;
+        }
+
+        header {
+            height: 160px;
+            background: #AEACA8 url('images/header.jpg');
+        }
+
+        h1 {
+            text-indent: -9999px;
+            width: 940px;
+            height: 130px;
+            margin: 0;
+        }
+
+        nav, footer {
+            color: #ffffff;
+            clear: both;
+            height: 30px;
+            background: #AEACA8 ;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 5px 0px 5px 30px;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav a#home {
+            color: black;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        section#principal {
+            float: left;
+            width: 659px;
+            border-right: 1px solid #eeeeee;
+        }
+
+        article {
+            clear: both;
+            overflow: auto;
+            width: 100%;
+        }
+
+        hgroup {
+            margin-top: 40px;
+        }
+
+        figure {
+            float: left;
+            max-width: 290px;
+            height: 220px;
+            margin: 20px;
+            padding: 5px;
+            border: 1px solid #eeeeee;
+        }
+
+        figcaption {
+           font-size: 90%;
+           text-align: left;
+        }
+        
+        aside {
+            width: 230px;
+            float: left;
+            padding: 0 0 0 20px;
+        }
+
+        aside section a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        aside section a:hover {
+            background: #eeeeee;
+        }
+
+        a {
+            color: #de6581;
+            text-decoration: none;
+        }
+
+        h2 {
+            margin: 10px 0 5px 0;
+            font-weight: normal;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+            color: #de6581;
+            font-weight: normal;
+        }
+
+        aside h2 {
+            padding: 30px 0 10px 0;
+        }
+
+        footer {
+            font-size: 80%;
+            padding: 7px 0 0 20px;
+        }
+
+        aside h2 {
+            color: #de6581;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="alert">
+            <h2>atenção!!</h2>
+            <p>Site não responsivo, recomendado acessar no computador!!!</p>
+        </div>
+        <header>
+            <h1>Yoko's Kitchen</h1>
+            <!--<img src="images/header.jpg" alt="Yoko's kitchen">-->
+            <nav>
+                <ul>
+                    <li><a href="" id="home">home</a></li>
+                    <li><a href="">classes</a></li>
+                    <li><a href="">catering</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="principal">
+            <article>
+                <figure>
+                    <img src="images/bok-choi.jpg" alt="bok choi">
+                    <figcaption>Bok Choi</figcaption>
+                </figure>
+                <hgroup>
+                    <h2>Japanese Vegetarian</h2>
+                    <h3>Five week course in London</h3>
+                </hgroup>
+                <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+            </article>
+            <article>
+                <figure>
+                    <img src="images/teriyaki.jpg" alt="teriyaki">
+                    <figcaption>Teriyaki</figcaption>
+                </figure>
+                <hgroup>
+                    <h2>Sauces Masterclass</h2>
+                    <h3>One day workshop</h3>
+                </hgroup>
+                <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+            </article>
+        </section>
+        <aside>
+            <section>
+                <h2>Popular Recipes</h2>
+                <a href="">Yakitori (grilled chicken)</a>
+                <a href="">Tsukune (minced chicken patties)</a>
+                <a href="">Okonomiyaki (savory pancakes)</a>
+                <a href="">Mizutaki (chicken stew)</a>
+            </section>
+            <section>
+                <h2>Conntact</h2>
+                <p>Yoko's Kitchen <br>
+                27 Redchurch Street <br>
+                Shoredutch <br>
+                London E2 7DP</p>
+            </section>
+        </aside>
+        <footer>
+            &copy; 2011 Yoko's Kitchen
+        </footer>
+    </div>
+</body>
+</html>
